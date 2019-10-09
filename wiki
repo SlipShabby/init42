@@ -1,0 +1,19 @@
+ifconfig    
+    the ifconfig command shows active network interfaces (you may have others)
+
+    ifconfig -a (show all interfaces)
+    ifconfig eth0 (show just eth0)
+    - UP shows that the kernel modules needed for the interface have been loaded.
+    - RUNNING tells you that the interface is ready to accept data.
+    - BROADCAST tells you that the interface supports broadcasting. Note that this is necessary if a system is going to obtain its address using DHCP as it has to broadcast its request for an IP address.
+    - MULTICAST tells you that the interface supports multicasting – sending packets to a select group of systems.
+    - MTU (maximum transmission unit) sets the packet size, generally 1500. Notice how the packet size for the loopback interface is so much larger. These packets, of course, don’t actually have to go over the network.
+    - RX and TX – Receive and transmit packet counts.
+
+    ifconfig eth0 UP
+    ifup eth0
+
+    ifconfig eth0 10.20.30.2 netmask 255.255.255.0 broadcast 10.20.30.255
+    (Assigning a different IP address, netmask, and broadcast address)
+
+    

@@ -1,0 +1,20 @@
+# Write a script of you choice.
+# Chose editor 
+
+#!/bin/bash
+echo "Do you wanna open a vim?"
+
+echo "1 to run vi"
+echo "2 to exit"
+read doing
+
+case $doing in
+1)
+/usr/bin/vi
+;;
+2)
+exit 0
+;;
+*)
+echo "Unsupported action! Try again"
+esac

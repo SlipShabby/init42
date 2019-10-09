@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#Identify and display the Ethernet interface characteristics:
+
+#(a) Identify broadcast address
+ifconfig | grep "broadcast" | cut -d " " -f6
+ifconfig | grep  "broadcast " | cut -c 37-61
+
+#(b) Identify all IP adresses which are part of the same subnet
+ipconfig getpacket en0 | grep 'subnet_mask '

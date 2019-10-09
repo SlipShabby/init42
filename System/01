@@ -1,0 +1,7 @@
+# In what file can you find the installed version of your Debian?
+
+# you can use one of the following option:
+
+1. cat /etc/issue
+2. cat /etc/debian_version
+3. cat /etc/os-release

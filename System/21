@@ -1,0 +1,6 @@
+# List all real users on the VM
+
+type grep -E '^UID_MIN|^UID_MAX' /etc/login.defs in order to obtain  UID_MIN
+and UID_MAX. Use this values in getent command.
+
+getent passwd {1000..60000}

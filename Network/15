@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Make the intra.42.fr address reroute to 46.19.122.85
+
+sudo ipconfig set en0 INFORM 46.19.122.85
+
+
+#OR
+
+
+echo "46.19.122.85 intra.42.fr" >> /etc/hosts

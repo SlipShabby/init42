@@ -1,0 +1,15 @@
+# Write a script which delete an ACTIVE user on the VM.
+
+#!/bin/bash
+existing_user=$(getent passwd $1)
+
+if [[ $EUID > 0 ]]
+then
+    echo "Please run as root/sudo"
+elif [ -z $existing_user ]
+then
+    echo "User $1 does not exist"
+else
+    userdel "$1"
+    echo "User $1 successfully deleted"
+fi
